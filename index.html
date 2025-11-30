@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your IT Company - Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 2em;
-    }
-    .email {
-      font-size: 1em;
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    .email:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simply Made IT — Managed IT services that give you time back</title>
+  <meta name="description" content="Simply Made IT delivers reliable, proactive B2B managed IT services so you can focus on what you do best." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Simply Made IT.</h1>
-  <h>Service with a purpose.
-  <p>We're launching soon. Stay tuned!</p>
-  <p>Contact us at <a href="mailto:info@simplymadeit.com" class="email">info@simplymadeit.com</a></p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <img src="assets/logo.png" alt="Simply Made IT logo" class="logo" />
+        <span>Simply Made IT</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact" class="btn btn-primary">Get a quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Managed IT services — <span class="accent">simply made</span>.</h1>
+          <p class="lead">Our mission is to give time back to businesses so you can focus on what you do best.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Start your free assessment</a>
+            <a href="#services" class="btn btn-secondary">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections remain same as before -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>What we do</h2>
+        <p class="section-lead">End-to-end, transparent managed IT with predictable costs.</p>
+        <!-- Service cards here -->
+      </div>
+    </section>
+
+    <section id="contact" class="section cta">
+      <div class="container">
+        <h2>Get a tailored quote</h2>
+        <p>Email us at <a href="mailto:info@simplymadeit.com">info@simplymadeit.com</a> or use the form below.</p>
+        <form class="contact-form" name="contact" netlify>
+          <label>Name<input type="text" name="name" required /></label>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Simply Made IT logo" class="logo small" />
+        <span>Simply Made IT</span>
+      </div>
+      <div class="legal">
+        <p>© <span id="year"></span> Simply Made IT | Denton M342 | info@simplymadeit.com</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
